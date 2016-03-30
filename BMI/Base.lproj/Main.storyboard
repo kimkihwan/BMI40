@@ -23,10 +23,12 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="Cob-nS-Bxw">
                                 <rect key="frame" x="0.0" y="-169" width="676" height="169"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cob-nS-Bxw" secondAttribute="height" multiplier="200:49" id="CDm-lH-FDT"/>
                                     <constraint firstAttribute="width" secondItem="Cob-nS-Bxw" secondAttribute="height" multiplier="4:1" id="pmj-pE-hzo"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="CDm-lH-FDT"/>
                                         <exclude reference="pmj-pE-hzo"/>
                                     </mask>
                                 </variation>
@@ -35,13 +37,16 @@
                                         <include reference="pmj-pE-hzo"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="196"/>
+                                    <mask key="constraints">
+                                        <include reference="CDm-lH-FDT"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pzr-N1-ifg">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.93686036143645568" green="0.067873106636788916" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="2" y="98" width="396" height="702"/>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -73,6 +78,20 @@
                             <mask key="subviews">
                                 <include reference="Cob-nS-Bxw"/>
                                 <include reference="Pzr-N1-ifg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6Wt-iP-buj"/>
+                                <include reference="TJ0-fD-azO"/>
+                                <include reference="rIw-2a-qBa"/>
+                                <include reference="gnD-Km-Dz8"/>
+                                <include reference="3xO-bv-VKs"/>
+                                <include reference="RaU-WH-CtY"/>
+                                <include reference="sTg-Yy-ePQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="Cob-nS-Bxw"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6Wt-iP-buj"/>
