@@ -37,7 +37,7 @@
                                         <include reference="pmj-pE-hzo"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="800" height="196"/>
                                     <mask key="constraints">
                                         <include reference="CDm-lH-FDT"/>
@@ -57,7 +57,7 @@
                             <constraint firstItem="Cob-nS-Bxw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="TJ0-fD-azO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pzr-N1-ifg" secondAttribute="bottom" id="gnD-Km-Dz8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Cob-nS-Bxw" secondAttribute="trailing" constant="-16" id="rIw-2a-qBa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Pzr-N1-ifg" secondAttribute="trailing" constant="-20" id="sTg-Yy-ePQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pzr-N1-ifg" secondAttribute="trailing" constant="-16" id="sTg-Yy-ePQ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -92,6 +92,7 @@
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="Cob-nS-Bxw"/>
+                                <include reference="Pzr-N1-ifg"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6Wt-iP-buj"/>
