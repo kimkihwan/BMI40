@@ -20,6 +20,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="Cob-nS-Bxw">
+                                <rect key="frame" x="0.0" y="-169" width="676" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cob-nS-Bxw" secondAttribute="height" multiplier="200:49" id="CDm-lH-FDT"/>
+                                    <constraint firstAttribute="width" secondItem="Cob-nS-Bxw" secondAttribute="height" multiplier="4:1" id="pmj-pE-hzo"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CDm-lH-FDT"/>
+                                        <exclude reference="pmj-pE-hzo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="pmj-pE-hzo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="CDm-lH-FDT"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pzr-N1-ifg">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
@@ -45,11 +68,17 @@
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="0Q3-Bu-zSL"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height in m" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrM-qx-iV6">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="nUi-3e-9dx"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93686036143645568" green="0.067873106636788916" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -117,29 +146,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="Cob-nS-Bxw">
-                                <rect key="frame" x="0.0" y="-169" width="676" height="169"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Cob-nS-Bxw" secondAttribute="height" multiplier="200:49" id="CDm-lH-FDT"/>
-                                    <constraint firstAttribute="width" secondItem="Cob-nS-Bxw" secondAttribute="height" multiplier="4:1" id="pmj-pE-hzo"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="CDm-lH-FDT"/>
-                                        <exclude reference="pmj-pE-hzo"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="pmj-pE-hzo"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="CDm-lH-FDT"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -153,8 +159,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Pzr-N1-ifg"/>
                                 <exclude reference="Cob-nS-Bxw"/>
+                                <exclude reference="Pzr-N1-ifg"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6Wt-iP-buj"/>
@@ -168,8 +174,8 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Pzr-N1-ifg"/>
                                 <include reference="Cob-nS-Bxw"/>
+                                <include reference="Pzr-N1-ifg"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6Wt-iP-buj"/>
@@ -183,8 +189,8 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="Pzr-N1-ifg"/>
                                 <include reference="Cob-nS-Bxw"/>
+                                <include reference="Pzr-N1-ifg"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6Wt-iP-buj"/>
@@ -197,6 +203,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="HeightTextField" destination="xrM-qx-iV6" id="WWi-Wv-BPS"/>
+                        <outlet property="WeightTextField" destination="cKw-4l-ZJf" id="39b-zk-O4H"/>
+                        <outlet property="bmiLabel" destination="0K5-hQ-EGt" id="plK-By-2Ff"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
